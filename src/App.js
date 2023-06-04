@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+
+import StationsFilter from './AppComponents/StationsFilter/StationsFilter';
+import StationsMap from './AppComponents/StationsMap/StationsMap';
+import StationsTable from './AppComponents/StationsTable/StationsTable';
+
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="header">
+        <h1 className="h1-searchbar">Gas Station Finder</h1>
       </header>
+      <div className="main-components">
+        <div className="left-section">
+          <StationsFilter />
+          <StationsTable />
+        </div>
+        <StationsMap />
+      </div>
     </div>
   );
 }
-
-export default App;
