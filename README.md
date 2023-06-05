@@ -1,3 +1,3 @@
 ## Fuel Station FrontEnd
 
-!{Website snapshot}(snap.png)
+![Website snapshot](snap.png)
