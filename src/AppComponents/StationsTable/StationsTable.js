@@ -1,8 +1,7 @@
 import React from "react";
 import "./StationsTable.css";
-import tableJson from "./sample_table.json";
 
-export default function StationsTable() {
+export default function StationsTable(props) {
   return (
     <table className="price-table">
       <thead>
@@ -14,7 +13,7 @@ export default function StationsTable() {
         </tr>
       </thead>
       <tbody>
-        {tableJson.map((row) => {
+        {props.stationsData.map((row) => {
           var color = "black";
           if (row.better_average == 1) {
             color = "green";
