@@ -1,7 +1,11 @@
 import "./StationsMap.css"
 import Plot from "react-plotly.js";
 import figJson from "./fig.json"
+
+
+
 export default function StationsMap() {
+
 
   const data = figJson["data"]
   const layout = figJson["layout"]
@@ -12,15 +16,21 @@ export default function StationsMap() {
   delete layout.width
   delete layout.height
 
+
   return (
     <div className="component-embbeder">
       <Plot
+
       data={data}
       layout={layout}
       style={{ height: "100%", width: "100%" }}
       useResizeHandler={true}
+      config={{  mapboxAccessToken:  'pk.eyJ1Ijoic2F0eTc2OCIsImEiOiJjbGlmM3JrZG8wOTJsM2VwaWdmazI1bnZyIn0.qZWvh0DdP0JZzMg_7Bz6Xw'}}
       />
     </div>
+
   )
+
+
 }
 

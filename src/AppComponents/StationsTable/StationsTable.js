@@ -21,6 +21,7 @@ export default function StationsTable() {
           } else if (row.better_average == -1) {
             color = "red";
           }
+        
           return (
             <tr key={row.address}>
               <td style={{ width: "50%", textAlign: "left" }}>
